@@ -1,0 +1,166 @@
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body *{
+  font-family: 'Poppings',sans-serif;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:2rem;
+  /* height: 90vh; */
+}
+#app{
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+}
+header{
+  width:100%;
+  max-width:30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search{
+  width:100%;
+margin-top:2rem;
+display: flex;
+justify-content: center;
+gap:0.5rem;
+}
+.search input{
+  flex:3
+}
+
+.search input,
+.search button {
+  height: 48px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+}
+
+.search input {
+  max-width: 462rem;
+  width: 462px;
+  height: 48px;
+  padding: 16px;
+  background-color: #4b4848;
+color: tomato;
+}
+.search input::placeholder {
+  color: tomato;
+  opacity: 1; /* Firefox */
+}
+.search button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  word-spacing: 3px;
+flex:2;
+  gap: 8px;
+  background-color: tomato;
+  cursor: pointer;
+}
+
+
+
+
+.card{
+  max-width:475px;
+  /* marging:15px; */
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   border-bottom-left-radius:32px;
+  border-top-right-radius:32px;
+}
+.card .card-title{
+  color:tomato;
+  background-color: #4b4848;
+  height: 64px;
+  border-top-right-radius:32px;
+  position: relative;
+}
+.card .card-title h3{
+  line-height: 64px;
+  padding-left:1rem;
+  font-weight: 700;
+}
+.card .card-title h4:before{
+  content: "@";
+}
+.card .card-title h4 a{
+  text-decoration: none;
+  cursor: pointer;
+  color:tomato
+}
+
+.card .card-title h4{
+  line-height: 64px;
+  padding-left:1rem;
+  position: absolute;
+  color:tomato;
+  right:40px
+}
+.card .card-title svg{
+  position: absolute;
+  top:12px;
+  right:10px;
+  cursor: pointer;
+
+}
+.card .card-title svg:hover path{
+  fill:rgb(109, 18, 15)
+}
+.card img{
+  width:100%;
+  margin-bottom:1rem;
+  border-radius:12px;
+  box-shadow: 0 4px 8px 1px rgba(0,0,0,0.2);
+}
+
+.card-body{
+  margin:15px;
+}
+
+.card .card-footer{
+  margin-top:1rem;
+  height: 64px;
+  display: flex;
+  align-items:center;
+  justify-content:space-around;
+  background-color: tomato;
+    border-bottom-left-radius:32px;
+}
+
+.card .card-footer span{
+  font-weight: bolder;
+ 
+}
+.card .card-title h4,
+.git-profile span{
+  max-width: 200px;;
+   /* word-wrap: break-word; */
+   overflow: hidden;
+}
+.repo,
+.followers,
+.git-profile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:0.3rem;
+
+
+}
