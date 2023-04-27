@@ -18,15 +18,18 @@ body{
   align-items: center;
   justify-content: center;
   gap:2rem;
+  background-color: #f0eaea;
   /* height: 90vh; */
 }
 #app{
   display: flex;
   flex-direction: column;
   gap:2rem;
+  padding:2rem
 }
 header{
   width:100%;
+  padding:2rem;
   max-width:30rem;
   display: flex;
   flex-direction: column;

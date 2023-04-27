@@ -13,7 +13,9 @@ body {
 body * {
   font-family: "Roboto", sans-serif;
 }
-
+#app{
+  padding:2rem;
+}
 header {
   max-width: 70rem;
   max-height: 43rem;
