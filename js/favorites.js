@@ -4,20 +4,10 @@ export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root)
     this.load()
-    GithubUser.search('maykbrito').then(user => {
-      console.log(user)
-    })
   }
   load() {
-    this.entries = JSON.parse(localStorage.getItem('@gitfav:')) || []
-    // this.windowWidth = window.innerWidth
-    // window.addEventListener('resize', () => {
-    //   this.windowWidth = window.innerWidth
-    //   console.log(this.windowWidth)
-    // })
-
-
-  }
+    this.entries = JSON.parse(localStorage.getItem('@gitfav:')) || []    
+}
   save() {
     localStorage.setItem('@gitfav:', JSON.stringify(this.entries))
   }
@@ -67,7 +57,6 @@ export class FavoritesView extends Favorites {
   }
   update() {
     this.removeAllTr()
-
     this.entries.forEach(user => {
       const row = this.createRow()
       row.querySelector('.card-body  img').src = `https://github.com/${user.login}.png`
@@ -89,10 +78,17 @@ export class FavoritesView extends Favorites {
       }
       this.root.append(row)
     })
-
+    this.updateFavs()
 
   }
+updateFavs(){
+  if (this.entries.length == 0) {
+    document.querySelector('.no-fav').classList.remove('hide')
+  }else{
+    document.querySelector('.no-fav').classList.add('hide')
 
+  }
+}
 
 
   removeAllTr() {
@@ -103,7 +99,7 @@ export class FavoritesView extends Favorites {
       card.remove()
 
     })
-
+  
 
   }
 
