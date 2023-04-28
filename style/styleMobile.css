@@ -3,41 +3,75 @@
   margin: 0;
   box-sizing: border-box;
 }
-*{
-  padding:0;
-  margin: 0;
-  box-sizing: border-box;
-}
+:root{
 
+  --dark-bg-color:#092D38;
+  --soft-bg-color:#06161B;
+  --txt-btn:#F75A68;
+  --text-cl:#FFF;
+
+}
+svg path{fill:#FFF}
 body *{
-  font-family: 'Poppings',sans-serif;
+  font-family: 'Poppins',sans-serif;
+  color:#FFF
 }
 body{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap:2rem;
-  background-color: #f0eaea;
+  background-color: #1e1e1e;
   /* height: 90vh; */
+  padding: 0;
+  position: relative;
+
+}
+
+a{
+  text-decoration: none;
 }
 #app{
   display: flex;
   flex-direction: column;
+  margin-top:5.5rem;
   gap:2rem;
-  padding:2rem
+  padding:1rem
+}
+#app .card:nth-child(even){
+  background-color:var(--dark-bg-color)
+}
+#app .card:nth-child(odd){
+  background-color:var(--soft-bg-color)
+}
+#app .card:nth-child(even) .card-title,
+#app .card:nth-child(even) .card-footer{
+   background-color:var(--soft-bg-color)
+
+}
+#app .card:nth-child(odd) .card-title,
+#app .card:nth-child(odd) .card-footer{
+ background-color:var(--dark-bg-color)
 }
 header{
   width:100%;
-  padding:2rem;
+  padding: 1rem;
   max-width:30rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background-color: #1e1e1e;
+  position:fixed;
+  height: 5rem;
+  top:0;
+  z-index: 2
+
+
 }
 .search{
   width:100%;
-margin-top:2rem;
+/* margin-top:2rem; */
 display: flex;
 justify-content: center;
 gap:0.5rem;
@@ -59,11 +93,11 @@ gap:0.5rem;
   width: 462px;
   height: 48px;
   padding: 16px;
-  background-color: #4b4848;
-color: tomato;
+  background-color: var(--soft-bg-color);
+color: #FFF;
 }
 .search input::placeholder {
-  color: tomato;
+  color: #FFF;
   opacity: 1; /* Firefox */
 }
 .search button {
@@ -74,7 +108,7 @@ color: tomato;
   word-spacing: 3px;
 flex:2;
   gap: 8px;
-  background-color: tomato;
+  background-color: #065E7C;
   cursor: pointer;
 }
 
@@ -87,50 +121,54 @@ flex:2;
 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
    border-bottom-left-radius:32px;
   border-top-right-radius:32px;
+  
+}
+.card .card-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .card .card-title{
-  color:tomato;
-  background-color: #4b4848;
+  background-color: #065E7C;
   height: 64px;
   border-top-right-radius:32px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  /* align-items:center; */
+  justify-content: center;
 }
 .card .card-title h3{
-  line-height: 64px;
+
   padding-left:1rem;
   font-weight: 700;
 }
 .card .card-title h4:before{
   content: "@";
 }
-.card .card-title h4 a{
-  text-decoration: none;
-  cursor: pointer;
-  color:tomato
-}
 
 .card .card-title h4{
-  line-height: 64px;
+  /* line-height: 64px; */
   padding-left:1rem;
-  position: absolute;
-  color:tomato;
-  right:40px
+  font-size: small;
+  color:var(--text-cl)
+
 }
 .card .card-title svg{
   position: absolute;
-  top:12px;
   right:10px;
   cursor: pointer;
+  
+}
+.card .card-title svg path{
+  fill:var(--txt-btn)
+}
 
-}
-.card .card-title svg:hover path{
-  fill:rgb(109, 18, 15)
-}
 .card img{
-  width:100%;
+  width:80%;
   margin-bottom:1rem;
   border-radius:12px;
-  box-shadow: 0 4px 8px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 1px rgba(0,0,0,0.5);
 }
 
 .card-body{
@@ -143,7 +181,7 @@ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   display: flex;
   align-items:center;
   justify-content:space-around;
-  background-color: tomato;
+  background-color: #061e25;
     border-bottom-left-radius:32px;
 }
 
